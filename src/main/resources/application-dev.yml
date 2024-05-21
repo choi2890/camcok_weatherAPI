@@ -1,0 +1,31 @@
+
+spring:
+  thymeleaf:
+    prefix: classpath:/template/
+    suffix: .html
+    mode: HTML
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # MySQL ??????? URL? ??? ?? ???? ?????:
+    # jdbc:mysql://[???]:[??]/[???????]?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/camcokdb?serverTimezone=UTC
+    username: root
+    password: my1234
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+  # MySQLDialect? ?????. ???? MySQL ??? ?? ?? ? ????.
+  # ?: MySQL8Dialect (MySQL 8.x ???)
+  # database-platform: org.hibernate.dialect.MySQL8Dialect
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+
+lombok:
+  log:
+    enabled: true
+server:
+  port: 7070
+
+
